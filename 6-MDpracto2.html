@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Doctor</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- google-font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .cont {
+    background-image: url(//www.practostatic.com/web-assets/home/assets/images/homepage.06859593240c3efd483fe48951cfe6ff.svg);
+    background-repeat: no-repeat;
+    /* height: 86vh ; */
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bottom {
+    position: absolute;
+    /* top: 0px; */
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(24, 24, 128);
+    /* margin-top: 200px !important; */
+  }
+
+  .bott {
+    width: 100% !important;
+    margin: auto !important;
+    background-color: rgb(24, 24, 128);
+  }
+
+  .swiper {
+    width: 100%;
+    /* height: 100%; */
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    object-fit: contain;
+  }
+
+  @media(min-width:990px) and (max-width:1335px) {
+    .hide {
+      display: none;
+    }
+  }
+
+  @media(max-width:610px) {
+    .bottom {
+      visibility: hidden;
+    }
+  }
+
+  @media(max-width:640px) {
+    .hy {
+      font-size: 10px !important;
+      text-wrap: nowrap;
+    }
+  }
+  .coll{
+    width: 100% !important;
+    margin: auto !important;
+  }
+  
+
+    
+</style>
+
+<body>
+  <!-- Navbar -->
+  <nav class=" sticky-top navbar navbar-expand-lg navbar-light bg-body-tertiary mb-4">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Collapsible wrapper -->
+      <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class=" navbar-brand mt-2 mt-lg-0" href="index.html">
+          <img src="practo0.png" alt="MDB Logo" loading="lazy" />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold fa-sm">
+          <li class="nav-item px-2">
+            <a class="nav-link active mb-2" href="6-MDpracto2.html">Find&nbsp;Doctors</a>
+            <a href="6-MDpracto2.html"> <small
+                class="fw-lighter fa-sm text-body-tertiary">Book&nbsp;an&nbsp;appointement</small></a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link  mb-2" href="#">Video&nbsp;Consult</a>
+            <a href="#"> <small class="fw-lighter fa-sm text-body-tertiary">Consult&nbsp;top&nbsp;doctors</small></a>
+
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link  mb-2" href="9Animation-practo.html">Medicines</a>
+            <a href="#"> <small class="fw-lighter fa-sm text-body-tertiary">Practo&nbsp;pharmacy</small></a>
+
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link mb-2" href="#">Lab&nbsp;Tests</a>
+            <a href="#"> <small
+                class="fw-lighter fa-sm text-body-tertiary">Book&nbsp;tests&nbsp;&&nbsp;checkup</small></a>
+
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link mb-2" href="#">Surgeries</a>
+            <a href="#"> <small class="fw-lighter fa-sm text-body-tertiary">Expert&nbsp;surgical&nbsp;care</small></a>
+
+          </li>
+        </ul>
+        <ul class="navbar-nav fs-0 me-auto mb-2 mb-lg-0 hide">
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a data-mdb-dropdown-init class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+              role="button" aria-expanded="false">
+              For&nbsp;Coprates&nbsp;
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" href="#">Health & Wellness Plans</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Grpup Insuarance</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a data-mdb-dropdown-init class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+              role="button" aria-expanded="false">
+              For&nbsp;Provides&nbsp;
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" href="#">Prime Practo</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Software for prpvides</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">List your practice for free</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">ABDM</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a data-mdb-dropdown-init class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+              role="button" aria-expanded="false">
+              Security&nbsp;&&nbsp;Help&nbsp;
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" href="#">Data Security</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Help</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- Collapsible wrapper -->
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <a class="text-reset me-3" href="#">
+          <button class="border border-1 bg-white py-1 px-2">signup/login</button>
+        </a>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <div class="container-fluid border border-1 cont w-100 ">
+    <div class="text-light text-center py-5 mx-auto">
+      <h2 class="fs-1 fw-bold">Your home for health</h2>
+      <h4 class="mt-4">Find and Book</h4>
+      <div
+        class=" row container-fluid  mx-auto my-4 d-flex flex-wrap justify-content-center  text-center border border-0">
+        <div class="col-md-6 px-5 py-1 form-outline w-auto mb-3 bg-white border border-0" data-mdb-input-init>
+          <input type="url" id="form12" class="form-control " name="address">
+          <label class="form-label" for="form12"><i
+              class="fa-solid fa-location-dot fa-sm"></i>&nbsp;&nbsp;kashmir</label>
+        </div>
+        <div class="col-md-6 form-outline px-5 w-auto mb-3 bg-white border border-0" data-mdb-input-init>
+          <input type="search" name="search" class="form-control" id="search1">
+          <label class="form-label fw-lighter" for="search1"><i
+              class="fa-solid fa-magnifying-glass fa-sm"></i>&nbsp;&nbsp;search doctors,clinics,hospitals,etc</label>
+        </div>
+        <div class="col-md-7 d-flex  justify-content-evenly flex-wrap text-secondary">
+          <small class="">Popular searches:</small>
+          <a href="" class="text-secondary px-3">Dermatologist</a>
+          <a href="" class="text-secondary  px-3">Pediatrician</a>
+          <a href="" class="text-secondary  px-3">Gynecologist/Obstetrician</a>
+          <a href="" class="text-secondary  px-3">others&nbsp;<i class="fa-solid fa-caret-down fa-sm"></i></a>
+        </div>
+        <div
+          class="col-md-12 d-flex flex-wrap container-fluid justify-content-center mx-auto py-4  text-dark  px-5 bottom">
+          <div class=" px-3">
+            <i class="fa-solid fa-clone text-light"></i><br><a href="" class="text-light">Consult with a
+              doctor</a>
+          </div>
+          <div class=" px-3"><i class="fa-solid fa-cart-shopping text-light"></i><br><a href="" class="text-light">Other
+              Medicines</a></div>
+          <div class=" px-3"><i class="fa-solid fa-file-medical text-light"></i><br><a href="" class="text-light">View
+              Medical records</a></div>
+          <div class=" px-3"><i class="fa-solid fa-flask text-light"></i><br><a href="" class="text-light">Book
+              test&nbsp;&nbsp;&nbsp;<button class="bg-success fs-sm fw-lighter border-light">new</button></a></div>
+          <div class=" px-3"><a href="" class="text-light "><i class="fa-solid fa-book-open text-light"></i><br>Read
+              articles</a></div>
+          <div class=" px-3"><i class="fa-solid fa-briefcase text-light"></i><br><a href="" class="text-light">For
+              Healthcare providers</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="row container-fluid justify-content-evenly text-muted px-5 bg-body-secondary py-5 mx-auto d-flex flex-wrap">
+    <div class="col-md-5">
+      <h1 class="text-dark">Safety of your data is our
+        <p class="fw-bold">top priority.</p>
+      </h1>
+      <p class="fs-5"><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Multi-level security checks</p>
+      <p class="fs-5"><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Multiple data backups</p>
+      <p class="fs-5"><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Stringent data privacy policies</p>
+      <button class="bg-info text-light border-0 py-1 px-3 fw-bold">Read more</button>
+    </div>
+    <div class="col-md-5 text-center"><img src="practo22.webp" alt="" width="50%"></div>
+    <div class="col-md-11 d-flex justify-content-evenly my-5 flex-wrap mx-auto text-center">
+      <div class="px-3">
+        <img src="//www.practostatic.com/web-assets/home/assets/images/security_2.654a7085bfa74c726f26b64edaafd9a5.png">
+        <p>256-bit<br>
+          encryption</p>
+      </div>
+      <div class="px-3">
+        <img src="//www.practostatic.com/web-assets/home/assets/images/security_3.a73921ca6e980ed186518d7cb0ce64bf.png">
+        <p>ISO 27001
+          <br> certified
+        </p>
+      </div>
+      <div class="px-3">
+        <img src="//www.practostatic.com/web-assets/home/assets/images/security_4.216e25d35038f0e7f6d8a514727fa67a.png">
+        <p>HIPAA
+          <br> compliant data <br> centers
+        </p>
+      </div>
+      <div class="px-3">
+        <img src="//www.practostatic.com/web-assets/home/assets/images/security_5.cf6e04c57178071a67c219b43066ffcf.png">
+        <p>DSCI
+          <br>member
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row container-fluid mx-auto justify-content-around px-5 py-5 text-muted d-flex flex-wrap ">
+    <div class="col-md-5">
+      <h1 class="text-dark">
+        Instant appointment with <br> doctors.<span class="fw-bold"> Guaranteed.</span>
+      </h1>
+      <p class="fs-5"><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp; <span class="fw-bold">100,000</span>
+        Verified doctors</p>
+      <p class="fs-5"><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;<span class="fw-bold">3M+</span> Patient
+        recommendations</p>
+      </p>
+      <p class="fs-5"><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;<span class="fw-bold">25M</span> 25M
+        Patients/year</p>
+      </p>
+      <button class="bg-info text-light border-0 py-1 px-3 fw-bold">Find me the right doctor</button>
+      <div id="carouselExampleControls" class="carousel slide px-5 mx-auto my-5 " data-mdb-ride="carousel"
+        data-mdb-carousel-init>
+        <div class="carousel-inner px-3">
+          <div class="carousel-item active fw-lighter">
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <p>Very good app. Well thought out about booking/rescheduling/cancelling an appointment. Also Doctor's
+              feedbac k mechanism is good and describes all the basics in good way.</p>
+          </div>
+          <div class="carousel-item fw-lighter">
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <p>Great app..get to know actual qualification of doctors n their alma mater n experience to judge the
+              background..along with peoples review...have stopped calling n taking appointments..just practo it</p>
+          </div>
+          <div class="carousel-item  fw-lighter">
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <p>I had severe pain in chest as well blood in cough. I searched through a lot of pulmonologists based on
+              rankings and feedbacks and finally settled to consult Dr Indu Bubna. She quickly diagnosed my disease as
+              pulmonary embolism and I was admitted to ICU. Now its all fine. If i would have gotten late then I
+              wouldn't be writing this. Thanks Practo!</p>
+          </div>
+        </div>
+        <button class="carousel-control-prev text-dark " type="button" data-mdb-target="#carouselExampleControls"
+          data-mdb-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden ">Previous</span>
+        </button>
+        <button class="carousel-control-next text-dark" type="button" data-mdb-target="#carouselExampleControls"
+          data-mdb-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-5 text-center">
+      <video src="practo23.webm" autoplay="true" loop width="250px">
+        <source src="practo23.webm">
+      </video>
+    </div>
+  </div>
+  <div class="row bg-body-secondary justify-content-around p-5 container-fluid d-flex flex-wrap coll">
+    <div class="col-md-5">
+      <video src="practo24.webm" autoplay="true" width="300px" loop>
+        <source src="practo24.webm" type="video/webm">
+      </video>
+    </div>
+    <div class="col-md-5  text-muted ">
+      <h1 class="text-dark">
+        Skip the waiting room. <br>
+        <span class="fw-bold">Consult with a doctor</span>
+      </h1>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Fees starting at <span class="fw-bold">Rs
+          99</span></p>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Verified doctors respond in<span
+          class="fw-bold"> in 5 minutes</span></p>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;<span class="fw-bold">100% confidential</span>
+        Private and confidential</p>
+      <button class="bg-info text-light border-0 py-1 px-3 fw-bold">Consult now</button>&nbsp;&nbsp;&nbsp;<span>71088
+        doctors online</span>
+      <div id="carouselExampleControl" class="carousel slide px-5 mx-auto my-5 " data-mdb-ride="carousel"
+        data-mdb-carousel-init>
+        <div class="carousel-inner px-3">
+          <div class="carousel-item active fw-lighter">
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <p>Very good app. Well thought out about booking/rescheduling/cancelling an appointment. Also Doctor's
+              feedbac k mechanism is good and describes all the basics in good way.</p>
+          </div>
+          <div class="carousel-item fw-lighter">
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <p>Great app..get to know actual qualification of doctors n their alma mater n experience to judge the
+              background..along with peoples review...have stopped calling n taking appointments..just practo it</p>
+          </div>
+          <div class="carousel-item  fw-lighter">
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <i class="fa-solid fa-star mx-1 text-success"></i>
+            <p>I had severe pain in chest as well blood in cough. I searched through a lot of pulmonologists based on
+              rankings and feedbacks and finally settled to consult Dr Indu Bubna. She quickly diagnosed my disease as
+              pulmonary embolism and I was admitted to ICU. Now its all fine. If i would have gotten late then I
+              wouldn't be writing this. Thanks Practo!</p>
+          </div>
+        </div>
+        <button class="carousel-control-prev text-dark " type="button" data-mdb-target="#carouselExampleControl"
+          data-mdb-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden ">Previous</span>
+        </button>
+        <button class="carousel-control-next text-dark" type="button" data-mdb-target="#carouselExampleControl"
+          data-mdb-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row container-fluid mx-auto py-5 ">
+    <h1 class="my-5 text-center fw-bold">Read top articles from health experts</h1>
+    <div class="col-md-10 mx-auto ">
+      <!-- Swiper -->
+      <div class="swiper mySwiperthree">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                <img src="practo25.jpeg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <a href="" class="text-muted ">
+                <div class="card-body text-start" style="max-width: 100% !important;">
+                  <h5 class="card-title text-dark fw-bold hy">Truth&nbsp;About&nbsp;Wisdom&nbsp;Tooth</h5>
+                  <small class="card-text hy ">Dr.Rivath Vyas Devulapalli,<br>Dentist.</small><br>
+                  <small class="fa-xs hy">370 Likes&nbsp;&nbsp;<i
+                      class="fa-solid fa-circle text-muted fa-xs"></i>&nbsp;&nbsp;24264 Views</small>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                <img src="practo26.jpeg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <a href="#!" class="text-muted ">
+                <div class="card-body text-start full">
+                  <h5 class="card-title text-dark fw-bold hy">5
+                    Simple,Safe&nbsp;and&nbsp;Effective<br>Tips&nbsp;to&nbsp;Reduce&nbsp;Belly&nbsp;Fat</h5>
+                  <small class="card-text hy">Ms.Pllavi Jassal,<br>Dietician/Nutritionist.</small><br>
+                  <small class="fa-xs hy">274 Likes&nbsp;&nbsp;<i
+                      class="fa-solid fa-circle text-muted fa-xs"></i>&nbsp;&nbsp;33921 Views</small>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                <img src="practo27.jpeg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <a href="#!" class="text-muted ">
+                <div class="card-body text-start ">
+                  <h5 class="card-title text-dark fw-bold hy">AN all
+                    Natural&nbsp;fat&nbsp;Burning<br>Drink&nbsp;to<br>lose&nbsp;5&nbsp;kg&nbsp;in&nbsp;2&nbsp;weeks!
+                  </h5>
+                  <small class="card-text hy">Ms.Pllavi Jassal,<br>Dietician/Nutritionist.</small><br>
+                  <small class="fa-xs hy">231 Likes&nbsp;&nbsp;<i
+                      class="fa-solid fa-circle text-muted fa-xs"></i>&nbsp;&nbsp;31653 Views</small>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                <img src="practo28.jpeg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <a href="#!" class="text-muted">
+                <div class="card-body text-start ">
+                  <h5 class="card-title text-dark fw-bold hy">
+                    5&nbsp;Effective&nbsp;FACE<br>Packs&nbsp;for<br>Healthy&nbsp;Skin</h5>
+                  <small class="card-text hy">Dr.Sachn Goel,.</small><br>
+                  <small class="fa-xs hy">193 Likes&nbsp;&nbsp;<i
+                      class="fa-solid fa-circle text-muted fa-xs"></i>&nbsp;&nbsp;18767 Views</small>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                <img src="practo29.jpeg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <a href="#!" class="text-muted">
+                <div class="card-body text-start">
+                  <h5 class="card-title text fw-bold hy ">
+                    20&nbsp;fat&nbsp;Healthy<br>Benefits&nbsp;of&nbsp;Kidney<br>Beans</h5>
+                  <small class="card-text hy">Ms.Swati Kapoor,<br>Dietician/Nutritionist.</small><br>
+                  <small class="fa-xs hy">189 Likes&nbsp;&nbsp;<i
+                      class="fa-solid fa-circle text-muted fa-xs"></i>&nbsp;&nbsp;342544 Views</small>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="col-md-6 my-5 mx-auto text-center"><button class="bg-info border border-0 py-2 px-3 text-light">More
+        articles</button></div>
+  </div>
+  <div class=" row container-fluid  py-5 mx-autojustify-content-around  d-flex flex-wrap">
+    <div class="col-md-5 ">
+      <img src="practo30.svg" alt="error-img" width="350px">
+    </div>
+    <div class="col-md-5  text-muted">
+      <h1 class="text-dark">
+        All Your Msedical Records <br>
+        <span class="fw-bold">In one secure app</span>
+      </h1>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;256-bit end to end encryption</p>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Records are accessible only by you</p>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Access your records across 8000+ centers</p>
+      <button class="bg-info text-light border-0 py-1 px-3 fw-bold">Find out more</button>
+    </div>
+  </div>
+  <div class="container-fluid row mx-auto justify-content-around py-5 bg-body-secondary d-flex flex-wrap">
+    <div class="col-md-5  text-muted">
+      <h1 class="text-dark">
+        Leading Healthcare Providers. <br>
+        <span class="fw-bold">Trust us for Business</span>
+      </h1>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Get seen by <span class="fw-bold">25M+
+        </span>patients on Practo.com</p>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;The most advanced software for clinics and
+        hospitals</p>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;State of the art business analytics for
+        enterprises</p>
+      <button class="bg-info text-light border-0 py-1 px-3 fw-bold">Learn more</button>
+      <div class=" fw-lighter my-5">
+        <i class="fa-solid fa-star mx-1 text-success fa-sm"></i>
+        <i class="fa-solid fa-star mx-1 text-success fa-sm"></i>
+        <i class="fa-solid fa-star mx-1 text-success fa-sm"></i>
+        <i class="fa-solid fa-star mx-1 text-success fa-sm"></i>
+        <i class="fa-solid fa-star mx-1 text-success fa-sm"></i><br>
+        <small>Enjoying all the programs that too through one app.but for Physio <br> people pls add a column for notes
+          instead of prescription.</small>
+      </div>
+    </div>
+    <div class="col-md-5"><img src="practo31.webp" alt="" width="100%"></div>
+  </div>
+  <div class="container-fluid row justify-content-around mx-auto py-5 text-muted d-flex flex-wrap">
+    <div class="col-md-5"> <img src="practo32.png" alt="" width="300px"></div>
+    <div class="col-md-5 ">
+      <h1 class="text-dark mb-3 fw-bold my-5">Download&nbsp;the&nbsp;Practo&nbsp;app</h1>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Book appointments and lab tests</p>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Order medicines</p>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Consult doctors online</p>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Set medicine reminders</p>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Store health records</p>
+      <p class=""><i class="fa-solid fa-check text-info "></i>&nbsp;&nbsp;Read health tips</p>
+      <a href="" class="px-2"><img src="practo33.webp" alt="" width="25%"></a>
+      <a href="" class="px-2"><img src="practo34.webp" alt="" width="25%"></a>
+    </div>
+  </div>
+  <div class="row py-5 text-center px-5 justify-content-around text-white container-fluid bott">
+    <div class="col-md-2 px-2 py-3">
+      <p>Practo</p>
+      <a href="" class="text-white">
+        About
+      </a><br>
+      <a href="" class="text-white">Blog</a><br>
+      <a href="" class="text-white"> Careers</a><br>
+      <a href="" class="text-white">Press</a><br>
+      <a href="" class="text-white">Contact Us</a>
+    </div>
+    <div class="col-md-2 px-2 py-3">
+      <p>For patients</p>
+      <a href="" class="text-white">Search for doctors</a><br>
+      <a href="" class="text-white">Search for clinics</a><br>
+      <a href="" class="text-white">Search for hospitals</a><br>
+      <a href="" class="text-white">Book Diagnostic Tests</a><br>
+      <a href="" class="text-white">Book Full Body Checkups</a><br>
+      <a href="" class="text-white">Practo Plus</a><br>
+      <a href="" class="text-white">Covid Hospital listing</a><br>
+      <a href="" class="text-white">Practo Care Clinics</a><br>
+      <a href="" class="text-white">Read health articles</a><br>
+      <a href="" class="text-white">Read about medicines</a><br>
+      <a href="" class="text-white">Practo drive</a><br>
+      <a href="" class="text-white">Health app</a><br>
+      <a href="" class="text-white">Practo Plus Infinity</a>
+    </div>
+    <div class="col-md-2 px-2 py-3">
+      <p>For doctors</p>
+      <a href="" class="text-white">Practo Profile</a><br><br>
+      <p>For clinics</p>
+      <a href="" class="text-white">Ray by Practo</a><br>
+      <a href="" class="text-white"> Practo Reach</a><br>
+      <a href="" class="text-white">Ray Tab</a><br>
+      <a href="" class="text-white">Practo Pro</a>
+    </div>
+    <div class="col-md-2 px-2 py-3">
+      <p>For hospitals</p>
+      <a href="" class="text-white">Insta by Practo</a><br>
+      <a href="" class="text-white">Qikwell by Practo</a><br>
+      <a href="" class="text-white">Practo Profile</a><br>
+      <a href="" class="text-white">Practo Reach</a><br>
+      <a href="" class="text-white">Practo Drive</a><br><br>
+      <p>For Corporates</p>
+      <a href="" class="text-white">Wellness Plans</a>
+    </div>
+    <div class="col-md-2 px-2 py-3">
+      <p>More</p>
+      <a href="" class="text-white">Help</a><br>
+      <a href="" class="text-white">Developers</a><br>
+      <a href="" class="text-white">Privacy Policy</a><br>
+      <a href="" class="text-white">Terms & Conditions</a><br>
+      <a href="" class="text-white">PCS T&C</a><br>
+      <a href="" class="text-white">Healthcare Directory</a><br>
+      <a href="" class="text-white">Practo Health Wiki</a><br>
+    </div>
+    <div class="col-md-2 px-2 py-3">
+      <p>Social</p>
+      <a href="" class="text-white">Facebook</a><br>
+      <a href="" class="text-white">Twitter</a><br>
+      <a href="" class="text-white">LinkedIn</a><br>
+      <a href="" class="text-white">Youtube</a><br>
+      <a href="" class="text-white">Github</a>
+    </div>
+    <div class="col-md-4 mx-auto"><img src="practo0.png" alt="" width="50%"></div>
+    <p class="mt-5 text-white">Copyright © 2017, Practo. All rights reserved.</p>
+  </div>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiperthree", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <!-- MDB SCRIPT -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
+</body>
+
+</html>
